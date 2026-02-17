@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-dark-900 text-white antialiased;
+  }
+
+  ::selection {
+    @apply bg-primary-500/30 text-white;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-dark-900;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary-500/40 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary-500/60;
+  }
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-300 via-teal-400 to-accent-400;
+  }
+
+  .gradient-border {
+    @apply relative;
+  }
+
+  .gradient-border::before {
+    content: "";
+    @apply absolute inset-0 rounded-xl p-[1px];
+    background: linear-gradient(135deg, #14b8a6, #2dd4bf, #22d3ee);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  }
+
+  .glass-card {
+    @apply bg-white/[0.03] backdrop-blur-xl border border-white/[0.08] rounded-xl;
+  }
+
+  .glow-effect {
+    box-shadow: 0 0 20px rgba(20, 184, 166, 0.15),
+      0 0 60px rgba(20, 184, 166, 0.05);
+  }
+
+  .glow-effect-hover:hover {
+    box-shadow: 0 0 30px rgba(20, 184, 166, 0.25),
+      0 0 80px rgba(20, 184, 166, 0.1);
+  }
+
+  .neon-line {
+    @apply h-1 w-20 rounded-full bg-gradient-to-r from-primary-500 via-teal-500 to-accent-500;
+  }
+
+  .section-padding {
+    @apply py-20 md:py-28 px-4 sm:px-6 lg:px-8;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Grid background pattern */
+.bg-grid-pattern {
+  background-image: linear-gradient(
+      rgba(20, 184, 166, 0.03) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(20, 184, 166, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Dot pattern */
+.bg-dot-pattern {
+  background-image: radial-gradient(
+    rgba(20, 184, 166, 0.15) 1px,
+    transparent 1px
+  );
+  background-size: 30px 30px;
+}
