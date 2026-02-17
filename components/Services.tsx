@@ -9,6 +9,7 @@ import {
   Brain,
   Settings,
 } from "lucide-react";
+import Link from "next/link";
 
 const services = [
   {
@@ -135,7 +136,10 @@ export default function Services() {
               </p>
 
               {/* Hover Arrow */}
-              <div className="mt-6 flex items-center gap-2 text-primary-400 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <Link
+                href="/services"
+                className="mt-6 flex items-center gap-2 text-primary-400 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
                 Learn More
                 <svg
                   className="w-4 h-4 group-hover:translate-x-1 transition-transform"
@@ -150,7 +154,7 @@ export default function Services() {
                     d="M17 8l4 4m0 0l-4 4m4-4H3"
                   />
                 </svg>
-              </div>
+              </Link>
             </motion.div>
           ))}
         </motion.div>

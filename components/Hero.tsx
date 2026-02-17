@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, Play, Code2, Sparkles, Zap } from "lucide-react";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -118,20 +119,20 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          <a
-            href="#contact"
+          <Link
+            href="/contact"
             className="group relative inline-flex items-center gap-2 px-8 py-4 text-base font-semibold text-white bg-gradient-to-r from-primary-500 to-teal-500 rounded-full hover:shadow-xl hover:shadow-primary-500/25 transition-all duration-300 hover:scale-105"
           >
             Start Your Project
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </a>
-          <a
-            href="#portfolio"
+          </Link>
+          <Link
+            href="/portfolio"
             className="group inline-flex items-center gap-2 px-8 py-4 text-base font-semibold text-gray-300 glass-card rounded-full hover:text-white hover:border-white/20 transition-all duration-300"
           >
             <Play className="w-5 h-5 text-primary-400" />
             View Our Work
-          </a>
+          </Link>
         </motion.div>
 
         {/* Tech Stack Bar */}
