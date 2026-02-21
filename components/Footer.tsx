@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import {
   Github,
   Linkedin,
@@ -14,22 +15,22 @@ import {
 
 const footerLinks = {
   services: [
-    { name: "Web Development", href: "#services" },
-    { name: "Mobile Apps", href: "#services" },
-    { name: "UI/UX Design", href: "#services" },
-    { name: "Cloud Solutions", href: "#services" },
-    { name: "AI & ML", href: "#services" },
+    { name: "Web Development", href: "/services" },
+    { name: "Mobile Apps", href: "/services" },
+    { name: "UI/UX Design", href: "/services" },
+    { name: "Cloud Solutions", href: "/services" },
+    { name: "AI & ML", href: "/services" },
   ],
   company: [
-    { name: "About Us", href: "#about" },
-    { name: "Our Team", href: "#team" },
-    { name: "Portfolio", href: "#portfolio" },
-    { name: "Careers", href: "#" },
-    { name: "Blog", href: "#" },
+    { name: "About Us", href: "/about" },
+    { name: "Our Team", href: "/team" },
+    { name: "Portfolio", href: "/portfolio" },
+    { name: "Careers", href: "/contact" },
+    { name: "Contact", href: "/contact" },
   ],
   support: [
-    { name: "Contact Us", href: "#contact" },
-    { name: "FAQ", href: "#" },
+    { name: "Contact Us", href: "/contact" },
+    { name: "FAQ", href: "/contact" },
     { name: "Privacy Policy", href: "#" },
     { name: "Terms of Service", href: "#" },
   ],
@@ -52,7 +53,7 @@ export default function Footer() {
         <div className="py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Brand Column */}
           <div className="lg:col-span-2">
-            <a href="#home" className="flex items-center mb-5">
+            <Link href="/" className="flex items-center mb-5">
               <Image
                 src="/images/logo.png"
                 alt="CodexaSoft"
@@ -60,7 +61,7 @@ export default function Footer() {
                 height={50}
                 className="h-12 w-auto object-contain"
               />
-            </a>
+            </Link>
             <p className="text-gray-400 text-sm leading-relaxed max-w-sm mb-6">
               Empowering businesses with innovative software solutions. We
               transform ideas into powerful digital products that drive growth
@@ -98,13 +99,13 @@ export default function Footer() {
             <ul className="space-y-3">
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
-                  <a
+                  <Link
                     href={link.href}
                     className="text-sm text-gray-400 hover:text-primary-400 transition-colors inline-flex items-center gap-1 group"
                   >
                     {link.name}
                     <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -118,13 +119,13 @@ export default function Footer() {
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
-                  <a
+                  <Link
                     href={link.href}
                     className="text-sm text-gray-400 hover:text-primary-400 transition-colors inline-flex items-center gap-1 group"
                   >
                     {link.name}
                     <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -138,13 +139,13 @@ export default function Footer() {
             <ul className="space-y-3">
               {footerLinks.support.map((link) => (
                 <li key={link.name}>
-                  <a
+                  <Link
                     href={link.href}
                     className="text-sm text-gray-400 hover:text-primary-400 transition-colors inline-flex items-center gap-1 group"
                   >
                     {link.name}
                     <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

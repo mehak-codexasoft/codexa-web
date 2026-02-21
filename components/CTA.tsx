@@ -2,10 +2,11 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
+import Link from "next/link";
 
 export default function CTA() {
   return (
-    <section id="contact" className="section-padding relative overflow-hidden">
+    <section className="section-padding relative overflow-hidden">
       <div className="container-custom relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -49,17 +50,21 @@ export default function CTA() {
               help transform your ideas into powerful digital solutions.
             </p>
 
-            {/* CTA Form */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-lg mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="w-full sm:flex-1 px-6 py-4 rounded-full bg-white/[0.05] border border-white/[0.1] text-white placeholder-gray-500 focus:outline-none focus:border-primary-500/50 focus:ring-2 focus:ring-primary-500/20 transition-all"
-              />
-              <button className="w-full sm:w-auto group inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-white bg-gradient-to-r from-primary-500 to-teal-500 rounded-full hover:shadow-xl hover:shadow-primary-500/25 transition-all duration-300 hover:scale-105 whitespace-nowrap">
+            {/* CTA Button */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link
+                href="/contact"
+                className="group inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-white bg-gradient-to-r from-primary-500 to-teal-500 rounded-full hover:shadow-xl hover:shadow-primary-500/25 transition-all duration-300 hover:scale-105"
+              >
                 Get in Touch
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </button>
+              </Link>
+              <Link
+                href="/portfolio"
+                className="group inline-flex items-center gap-2 px-8 py-4 text-base font-semibold text-gray-300 glass-card rounded-full hover:text-white transition-all duration-300"
+              >
+                View Our Work
+              </Link>
             </div>
 
             <p className="text-xs text-gray-500 mt-4">
