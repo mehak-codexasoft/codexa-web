@@ -98,11 +98,18 @@ export default function Stats() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
-              className="text-center group"
+              whileHover={{ y: -8, scale: 1.05 }}
+              className="text-center group cursor-default"
+              style={{ perspective: "800px" }}
             >
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary-500/10 to-teal-500/10 flex items-center justify-center mx-auto mb-4 group-hover:from-primary-500/20 group-hover:to-teal-500/20 transition-all duration-300">
+              <motion.div
+                whileHover={{ rotateY: 15, scale: 1.1 }}
+                transition={{ type: "spring", stiffness: 200 }}
+                className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary-500/10 to-teal-500/10 flex items-center justify-center mx-auto mb-4 group-hover:from-primary-500/20 group-hover:to-teal-500/20 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-primary-500/10"
+                style={{ transformStyle: "preserve-3d" }}
+              >
                 <stat.icon className="w-7 h-7 text-primary-400" />
-              </div>
+              </motion.div>
               <div className="text-3xl md:text-4xl lg:text-5xl font-bold gradient-text font-[family-name:var(--font-space-grotesk)] mb-2">
                 <AnimatedCounter value={stat.value} suffix={stat.suffix} />
               </div>

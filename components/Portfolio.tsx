@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
+import TiltCard from "./TiltCard";
 
 const projects = [
   {
@@ -111,63 +112,72 @@ export default function Portfolio() {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
           {projects.map((project) => (
-            <motion.div
-              key={project.title}
-              variants={itemVariants}
-              className="group glass-card rounded-xl overflow-hidden hover:bg-white/[0.06] transition-all duration-500 glow-effect-hover"
-            >
-              {/* Project Image/Gradient */}
-              <div
-                className={`relative h-48 ${project.image} flex items-center justify-center overflow-hidden`}
-              >
-                <div
-                  className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-10 group-hover:opacity-20 transition-opacity duration-500`}
-                />
-                <div className="relative z-10 text-center">
+            <motion.div key={project.title} variants={itemVariants}>
+              <TiltCard className="h-full glass-card rounded-xl overflow-hidden glow-effect-hover" tiltAmount={8}>
+                <div className="group h-full">
+                  {/* Project Image/Gradient */}
                   <div
-                    className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${project.gradient} flex items-center justify-center mx-auto shadow-lg opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500`}
+                    className={`relative h-48 ${project.image} flex items-center justify-center overflow-hidden`}
                   >
-                    <span className="text-2xl font-bold text-white">
-                      {project.title.charAt(0)}
+                    <div
+                      className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-10 group-hover:opacity-20 transition-opacity duration-500`}
+                    />
+                    <div className="relative z-10 text-center">
+                      <motion.div
+                        whileHover={{ scale: 1.2, rotateY: 15 }}
+                        transition={{ type: "spring", stiffness: 200 }}
+                        className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${project.gradient} flex items-center justify-center mx-auto shadow-lg opacity-60 group-hover:opacity-100 transition-all duration-500`}
+                        style={{ transformStyle: "preserve-3d" }}
+                      >
+                        <span className="text-2xl font-bold text-white">
+                          {project.title.charAt(0)}
+                        </span>
+                      </motion.div>
+                    </div>
+
+                    {/* Hover Overlay */}
+                    <div className="absolute inset-0 bg-dark-900/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-3 z-20">
+                      <motion.button
+                        whileHover={{ scale: 1.15, y: -3 }}
+                        className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center hover:bg-white/20 transition-colors"
+                      >
+                        <ExternalLink className="w-5 h-5 text-white" />
+                      </motion.button>
+                      <motion.button
+                        whileHover={{ scale: 1.15, y: -3 }}
+                        className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center hover:bg-white/20 transition-colors"
+                      >
+                        <Github className="w-5 h-5 text-white" />
+                      </motion.button>
+                    </div>
+                  </div>
+
+                  {/* Content */}
+                  <div className="p-6">
+                    <span className="text-xs font-medium text-primary-400 uppercase tracking-wider">
+                      {project.category}
                     </span>
+                    <h3 className="text-lg font-bold font-[family-name:var(--font-space-grotesk)] mt-1 mb-2 group-hover:text-white transition-colors">
+                      {project.title}
+                    </h3>
+                    <p className="text-sm text-gray-400 leading-relaxed mb-4">
+                      {project.description}
+                    </p>
+
+                    {/* Tags */}
+                    <div className="flex flex-wrap gap-2">
+                      {project.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="text-xs px-3 py-1 rounded-full bg-white/[0.05] text-gray-400 border border-white/[0.05]"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
-
-                {/* Hover Overlay */}
-                <div className="absolute inset-0 bg-dark-900/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-3">
-                  <button className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center hover:bg-white/20 transition-colors">
-                    <ExternalLink className="w-5 h-5 text-white" />
-                  </button>
-                  <button className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center hover:bg-white/20 transition-colors">
-                    <Github className="w-5 h-5 text-white" />
-                  </button>
-                </div>
-              </div>
-
-              {/* Content */}
-              <div className="p-6">
-                <span className="text-xs font-medium text-primary-400 uppercase tracking-wider">
-                  {project.category}
-                </span>
-                <h3 className="text-lg font-bold font-[family-name:var(--font-space-grotesk)] mt-1 mb-2 group-hover:text-white transition-colors">
-                  {project.title}
-                </h3>
-                <p className="text-sm text-gray-400 leading-relaxed mb-4">
-                  {project.description}
-                </p>
-
-                {/* Tags */}
-                <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="text-xs px-3 py-1 rounded-full bg-white/[0.05] text-gray-400 border border-white/[0.05]"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
+              </TiltCard>
             </motion.div>
           ))}
         </motion.div>
