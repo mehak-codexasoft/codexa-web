@@ -238,18 +238,27 @@ export default function TeamPage() {
                   <a
                     href={member.socials.linkedin}
                     className="w-10 h-10 rounded-full bg-white/[0.05] flex items-center justify-center hover:bg-primary-500/20 hover:text-primary-400 text-gray-500 transition-all"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${member.name} on LinkedIn`}
                   >
                     <Linkedin className="w-4 h-4" />
                   </a>
                   <a
                     href={member.socials.github}
                     className="w-10 h-10 rounded-full bg-white/[0.05] flex items-center justify-center hover:bg-primary-500/20 hover:text-primary-400 text-gray-500 transition-all"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${member.name} on GitHub`}
                   >
                     <Github className="w-4 h-4" />
                   </a>
                   <a
                     href={member.socials.twitter}
                     className="w-10 h-10 rounded-full bg-white/[0.05] flex items-center justify-center hover:bg-primary-500/20 hover:text-primary-400 text-gray-500 transition-all"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${member.name} on Twitter`}
                   >
                     <Twitter className="w-4 h-4" />
                   </a>
@@ -313,18 +322,27 @@ export default function TeamPage() {
                   <a
                     href={member.socials.linkedin}
                     className="w-9 h-9 rounded-full bg-white/[0.05] flex items-center justify-center hover:bg-primary-500/20 hover:text-primary-400 text-gray-500 transition-all"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${member.name} on LinkedIn`}
                   >
                     <Linkedin className="w-4 h-4" />
                   </a>
                   <a
                     href={member.socials.github}
                     className="w-9 h-9 rounded-full bg-white/[0.05] flex items-center justify-center hover:bg-primary-500/20 hover:text-primary-400 text-gray-500 transition-all"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${member.name} on GitHub`}
                   >
                     <Github className="w-4 h-4" />
                   </a>
                   <a
                     href={member.socials.twitter}
                     className="w-9 h-9 rounded-full bg-white/[0.05] flex items-center justify-center hover:bg-primary-500/20 hover:text-primary-400 text-gray-500 transition-all"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${member.name} on Twitter`}
                   >
                     <Twitter className="w-4 h-4" />
                   </a>

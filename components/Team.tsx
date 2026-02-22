@@ -135,13 +135,16 @@ export default function Team() {
                   {/* Socials with 3D pop */}
                   <div className="flex items-center justify-center gap-3 mt-5">
                     {[
-                      { icon: Linkedin, href: member.socials.linkedin },
-                      { icon: Github, href: member.socials.github },
-                      { icon: Twitter, href: member.socials.twitter },
+                      { icon: Linkedin, href: member.socials.linkedin, label: "LinkedIn" },
+                      { icon: Github, href: member.socials.github, label: "GitHub" },
+                      { icon: Twitter, href: member.socials.twitter, label: "Twitter" },
                     ].map((social, i) => (
                       <motion.a
                         key={i}
                         href={social.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`${member.name} on ${social.label}`}
                         whileHover={{ y: -4, scale: 1.15 }}
                         className="w-9 h-9 rounded-full bg-white/[0.05] flex items-center justify-center hover:bg-primary-500/20 hover:text-primary-400 text-gray-500 transition-all duration-200"
                       >

@@ -56,7 +56,7 @@ export default function Footer() {
             <Link href="/" className="flex items-center mb-5">
               <Image
                 src="/images/logo.png"
-                alt="CodexaSoft"
+                alt="CodexaSoft - Software Development Company"
                 width={180}
                 height={50}
                 className="h-12 w-auto object-contain"
@@ -164,7 +164,9 @@ export default function Footer() {
               <a
                 key={social.label}
                 href={social.href}
-                aria-label={social.label}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`CodexaSoft on ${social.label}`}
                 className="w-9 h-9 rounded-full bg-white/[0.05] flex items-center justify-center hover:bg-primary-500/20 hover:text-primary-400 text-gray-500 transition-all duration-200"
               >
                 <social.icon className="w-4 h-4" />

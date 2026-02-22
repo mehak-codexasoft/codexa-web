@@ -50,7 +50,7 @@ export default function Navbar() {
           <Link href="/" className="flex items-center">
             <Image
               src="/images/logo.png"
-              alt="CodexaSoft"
+              alt="CodexaSoft - Innovative Software Solutions"
               width={240}
               height={68}
               className="h-12 md:h-[68px] w-auto object-contain"
@@ -94,6 +94,8 @@ export default function Navbar() {
           <button
             onClick={() => setIsMobileOpen(!isMobileOpen)}
             className="md:hidden text-gray-400 hover:text-white transition-colors"
+            aria-label={isMobileOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-expanded={isMobileOpen}
           >
             {isMobileOpen ? <X size={24} /> : <Menu size={24} />}
           </button>

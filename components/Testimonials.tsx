@@ -86,7 +86,7 @@ const itemVariants = {
 
 export default function Testimonials() {
   return (
-    <section className="section-padding relative overflow-hidden">
+    <section id="testimonials" className="section-padding relative overflow-hidden">
       {/* Background */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary-500/5 rounded-full blur-[128px]" />
 
