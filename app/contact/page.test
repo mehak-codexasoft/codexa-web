@@ -390,6 +390,9 @@ export default function ContactPage() {
                       <a
                         key={social.label}
                         href={social.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`CodexaSoft on ${social.label}`}
                         className="w-10 h-10 rounded-full bg-white/[0.05] flex items-center justify-center hover:bg-primary-500/20 hover:text-primary-400 text-gray-500 transition-all"
                       >
                         <social.icon className="w-4 h-4" />

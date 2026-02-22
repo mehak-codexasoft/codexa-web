@@ -10,6 +10,7 @@ import {
   Settings,
 } from "lucide-react";
 import Link from "next/link";
+import TiltCard from "./TiltCard";
 
 const services = [
   {
@@ -115,46 +116,52 @@ export default function Services() {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
           {services.map((service) => (
-            <motion.div
-              key={service.title}
-              variants={itemVariants}
-              className="group relative glass-card p-8 rounded-xl hover:bg-white/[0.06] transition-all duration-500 glow-effect-hover"
-            >
-              {/* Icon */}
-              <div
-                className={`w-14 h-14 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 ${service.shadow} shadow-lg`}
-              >
-                <service.icon className="w-7 h-7 text-white" />
-              </div>
+            <motion.div key={service.title} variants={itemVariants}>
+              <TiltCard className="h-full glass-card rounded-xl glow-effect-hover">
+                <div className="group relative p-8 h-full">
+                  {/* 3D floating icon */}
+                  <motion.div
+                    whileHover={{ z: 30, scale: 1.15, rotateY: 10 }}
+                    transition={{ type: "spring", stiffness: 300 }}
+                    className={`w-14 h-14 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-6 ${service.shadow} shadow-lg`}
+                    style={{ transformStyle: "preserve-3d" }}
+                  >
+                    <service.icon className="w-7 h-7 text-white" />
+                  </motion.div>
 
-              {/* Content */}
-              <h3 className="text-xl font-bold font-[family-name:var(--font-space-grotesk)] mb-3 group-hover:text-white transition-colors">
-                {service.title}
-              </h3>
-              <p className="text-gray-400 leading-relaxed text-sm">
-                {service.description}
-              </p>
+                  {/* Content */}
+                  <h3
+                    className="text-xl font-bold font-[family-name:var(--font-space-grotesk)] mb-3 group-hover:text-white transition-colors"
+                    style={{ transform: "translateZ(20px)", transformStyle: "preserve-3d" }}
+                  >
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-400 leading-relaxed text-sm">
+                    {service.description}
+                  </p>
 
-              {/* Hover Arrow */}
-              <Link
-                href="/services"
-                className="mt-6 flex items-center gap-2 text-primary-400 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-              >
-                Learn More
-                <svg
-                  className="w-4 h-4 group-hover:translate-x-1 transition-transform"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
-                </svg>
-              </Link>
+                  {/* Hover Arrow */}
+                  <Link
+                    href="/services"
+                    className="mt-6 flex items-center gap-2 text-primary-400 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  >
+                    Learn More
+                    <svg
+                      className="w-4 h-4 group-hover:translate-x-1 transition-transform"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M17 8l4 4m0 0l-4 4m4-4H3"
+                      />
+                    </svg>
+                  </Link>
+                </div>
+              </TiltCard>
             </motion.div>
           ))}
         </motion.div>

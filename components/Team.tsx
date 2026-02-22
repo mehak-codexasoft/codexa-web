@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Linkedin, Github, Twitter } from "lucide-react";
+import TiltCard from "./TiltCard";
 
 const team = [
   {
@@ -107,50 +108,52 @@ export default function Team() {
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
         >
           {team.map((member) => (
-            <motion.div
-              key={member.name}
-              variants={itemVariants}
-              className="glass-card p-8 rounded-xl text-center hover:bg-white/[0.06] transition-all duration-300 group glow-effect-hover"
-            >
-              {/* Avatar */}
-              <div
-                className={`w-20 h-20 rounded-full bg-gradient-to-br ${member.color} flex items-center justify-center mx-auto mb-5 text-2xl font-bold text-white group-hover:scale-110 transition-transform duration-300 shadow-lg`}
-              >
-                {member.avatar}
-              </div>
+            <motion.div key={member.name} variants={itemVariants}>
+              <TiltCard className="h-full glass-card rounded-xl glow-effect-hover" tiltAmount={10}>
+                <div className="p-8 text-center group h-full">
+                  {/* 3D Avatar */}
+                  <motion.div
+                    whileHover={{ scale: 1.15, rotateY: 15, z: 30 }}
+                    transition={{ type: "spring", stiffness: 200 }}
+                    className={`w-20 h-20 rounded-full bg-gradient-to-br ${member.color} flex items-center justify-center mx-auto mb-5 text-2xl font-bold text-white shadow-lg`}
+                    style={{ transformStyle: "preserve-3d" }}
+                  >
+                    {member.avatar}
+                  </motion.div>
 
-              {/* Info */}
-              <h3 className="text-lg font-bold font-[family-name:var(--font-space-grotesk)] group-hover:text-white transition-colors">
-                {member.name}
-              </h3>
-              <p className="text-primary-400 text-sm font-medium mt-1">
-                {member.role}
-              </p>
-              <p className="text-gray-400 text-sm mt-3 leading-relaxed">
-                {member.bio}
-              </p>
+                  {/* Info */}
+                  <h3 className="text-lg font-bold font-[family-name:var(--font-space-grotesk)] group-hover:text-white transition-colors">
+                    {member.name}
+                  </h3>
+                  <p className="text-primary-400 text-sm font-medium mt-1">
+                    {member.role}
+                  </p>
+                  <p className="text-gray-400 text-sm mt-3 leading-relaxed">
+                    {member.bio}
+                  </p>
 
-              {/* Socials */}
-              <div className="flex items-center justify-center gap-3 mt-5">
-                <a
-                  href={member.socials.linkedin}
-                  className="w-9 h-9 rounded-full bg-white/[0.05] flex items-center justify-center hover:bg-primary-500/20 hover:text-primary-400 text-gray-500 transition-all duration-200"
-                >
-                  <Linkedin className="w-4 h-4" />
-                </a>
-                <a
-                  href={member.socials.github}
-                  className="w-9 h-9 rounded-full bg-white/[0.05] flex items-center justify-center hover:bg-primary-500/20 hover:text-primary-400 text-gray-500 transition-all duration-200"
-                >
-                  <Github className="w-4 h-4" />
-                </a>
-                <a
-                  href={member.socials.twitter}
-                  className="w-9 h-9 rounded-full bg-white/[0.05] flex items-center justify-center hover:bg-primary-500/20 hover:text-primary-400 text-gray-500 transition-all duration-200"
-                >
-                  <Twitter className="w-4 h-4" />
-                </a>
-              </div>
+                  {/* Socials with 3D pop */}
+                  <div className="flex items-center justify-center gap-3 mt-5">
+                    {[
+                      { icon: Linkedin, href: member.socials.linkedin, label: "LinkedIn" },
+                      { icon: Github, href: member.socials.github, label: "GitHub" },
+                      { icon: Twitter, href: member.socials.twitter, label: "Twitter" },
+                    ].map((social, i) => (
+                      <motion.a
+                        key={i}
+                        href={social.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`${member.name} on ${social.label}`}
+                        whileHover={{ y: -4, scale: 1.15 }}
+                        className="w-9 h-9 rounded-full bg-white/[0.05] flex items-center justify-center hover:bg-primary-500/20 hover:text-primary-400 text-gray-500 transition-all duration-200"
+                      >
+                        <social.icon className="w-4 h-4" />
+                      </motion.a>
+                    ))}
+                  </div>
+                </div>
+              </TiltCard>
             </motion.div>
           ))}
         </motion.div>

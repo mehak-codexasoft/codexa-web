@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Target, Eye, Award, Users } from "lucide-react";
+import TiltCard from "./TiltCard";
 
 const highlights = [
   {
@@ -67,7 +68,7 @@ export default function About() {
               love and businesses rely on.
             </p>
 
-            {/* Stats */}
+            {/* Stats with 3D hover */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
               {[
                 { value: "500+", label: "Projects" },
@@ -75,19 +76,23 @@ export default function About() {
                 { value: "50+", label: "Team" },
                 { value: "8+", label: "Years" },
               ].map((stat) => (
-                <div key={stat.label} className="text-center">
+                <motion.div
+                  key={stat.label}
+                  whileHover={{ y: -5, scale: 1.08 }}
+                  className="text-center cursor-default"
+                >
                   <div className="text-2xl md:text-3xl font-bold gradient-text font-[family-name:var(--font-space-grotesk)]">
                     {stat.value}
                   </div>
                   <div className="text-sm text-gray-500 mt-1">
                     {stat.label}
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </motion.div>
 
-          {/* Right Content - Cards Grid */}
+          {/* Right Content - 3D Cards Grid */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -102,17 +107,25 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="glass-card p-6 rounded-xl hover:bg-white/[0.06] transition-all duration-300 group"
               >
-                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary-500/20 to-teal-500/20 flex items-center justify-center mb-4 group-hover:from-primary-500/30 group-hover:to-teal-500/30 transition-all">
-                  <item.icon className="w-6 h-6 text-primary-400" />
-                </div>
-                <h3 className="text-lg font-bold font-[family-name:var(--font-space-grotesk)] mb-2">
-                  {item.title}
-                </h3>
-                <p className="text-sm text-gray-400 leading-relaxed">
-                  {item.description}
-                </p>
+                <TiltCard className="h-full glass-card rounded-xl" tiltAmount={12}>
+                  <div className="p-6 group h-full">
+                    <motion.div
+                      whileHover={{ scale: 1.15, rotateY: 10 }}
+                      transition={{ type: "spring", stiffness: 300 }}
+                      className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary-500/20 to-teal-500/20 flex items-center justify-center mb-4 group-hover:from-primary-500/30 group-hover:to-teal-500/30 transition-all"
+                      style={{ transformStyle: "preserve-3d" }}
+                    >
+                      <item.icon className="w-6 h-6 text-primary-400" />
+                    </motion.div>
+                    <h3 className="text-lg font-bold font-[family-name:var(--font-space-grotesk)] mb-2">
+                      {item.title}
+                    </h3>
+                    <p className="text-sm text-gray-400 leading-relaxed">
+                      {item.description}
+                    </p>
+                  </div>
+                </TiltCard>
               </motion.div>
             ))}
           </motion.div>
