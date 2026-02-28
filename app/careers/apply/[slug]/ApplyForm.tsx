@@ -107,7 +107,7 @@ export default function ApplyForm({ position }: { position: Position }) {
       <Navbar />
 
       {/* Hero */}
-      <section className="relative pt-40 pb-12 md:pt-48 md:pb-16 overflow-hidden">
+      <section className="relative pt-40 pb-16 md:pt-48 md:pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern" />
         <div className="absolute inset-0 bg-gradient-to-b from-dark-900 via-dark-900/50 to-dark-900" />
         <div
@@ -166,7 +166,7 @@ export default function ApplyForm({ position }: { position: Position }) {
       </section>
 
       {/* Form Section */}
-      <section className="relative pb-20">
+      <section className="relative pt-4 pb-20">
         <div className="container-custom relative z-10">
           <div className="grid lg:grid-cols-3 gap-10">
             {/* Form */}
