@@ -500,10 +500,203 @@ These combined improvements drove the conversion rate from 1.2% to 3.6% — a 20
   },
 ];
 
+export const openPositions = [
+  {
+    slug: "senior-react-developer",
+    title: "Senior React Developer",
+    department: "Engineering",
+    location: "Remote / Silicon Valley",
+    type: "Full-time",
+    level: "Senior",
+    description:
+      "Build high-performance web applications using React, Next.js, and TypeScript for our enterprise clients.",
+    longDescription:
+      "As a Senior React Developer at CodexaSoft, you'll lead the frontend architecture for enterprise-grade web applications. You'll work closely with designers, backend engineers, and product managers to deliver pixel-perfect, high-performance user interfaces. You'll mentor junior developers, conduct code reviews, and drive best practices across the engineering team.",
+    responsibilities: [
+      "Lead frontend architecture decisions for complex web applications",
+      "Build reusable component libraries and design systems",
+      "Optimize application performance and Core Web Vitals",
+      "Mentor junior developers through code reviews and pair programming",
+      "Collaborate with designers to implement pixel-perfect interfaces",
+      "Integrate REST and GraphQL APIs with frontend applications",
+    ],
+    requirements: [
+      "5+ years of experience with React and modern JavaScript/TypeScript",
+      "Strong experience with Next.js, server-side rendering, and static generation",
+      "Proficiency in state management (Redux, Zustand, or Context API)",
+      "Experience with testing frameworks (Jest, React Testing Library, Cypress)",
+      "Understanding of CI/CD pipelines and deployment workflows",
+      "Excellent communication and team collaboration skills",
+    ],
+    tags: ["React", "Next.js", "TypeScript", "Node.js"],
+    gradient: "from-blue-500 to-primary-500",
+    salary: "$120K - $160K",
+  },
+  {
+    slug: "flutter-mobile-developer",
+    title: "Flutter Mobile Developer",
+    department: "Mobile",
+    location: "Remote / Silicon Valley",
+    type: "Full-time",
+    level: "Mid-Senior",
+    description:
+      "Create beautiful cross-platform mobile applications using Flutter and Dart for iOS and Android.",
+    longDescription:
+      "Join our mobile team to build cross-platform applications that delight users on both iOS and Android. You'll work on a variety of projects — from food delivery apps to healthcare platforms — using Flutter and Dart. You'll be responsible for the full mobile development lifecycle, from architecture to deployment on app stores.",
+    responsibilities: [
+      "Develop cross-platform mobile apps using Flutter and Dart",
+      "Design and implement clean, maintainable mobile architectures",
+      "Integrate mobile apps with backend services and third-party APIs",
+      "Implement push notifications, deep linking, and offline functionality",
+      "Optimize app performance, battery usage, and memory consumption",
+      "Publish and maintain apps on App Store and Google Play",
+    ],
+    requirements: [
+      "3+ years of mobile development experience with Flutter",
+      "Strong understanding of Dart programming language",
+      "Experience with Firebase, Supabase, or similar BaaS platforms",
+      "Knowledge of native iOS (Swift) or Android (Kotlin) development",
+      "Experience with state management (BLoC, Riverpod, or Provider)",
+      "Published apps on App Store or Google Play",
+    ],
+    tags: ["Flutter", "Dart", "Firebase", "REST APIs"],
+    gradient: "from-primary-500 to-teal-500",
+    salary: "$100K - $140K",
+  },
+  {
+    slug: "ai-ml-engineer",
+    title: "AI/ML Engineer",
+    department: "AI Division",
+    location: "Remote",
+    type: "Full-time",
+    level: "Senior",
+    description:
+      "Design and implement machine learning models, NLP systems, and AI-powered features for client products.",
+    longDescription:
+      "As an AI/ML Engineer, you'll be at the forefront of building intelligent features that power our clients' products. From recommendation engines to natural language processing systems, you'll design, train, and deploy machine learning models that solve real business problems at scale.",
+    responsibilities: [
+      "Design and train custom ML models for client applications",
+      "Build NLP pipelines for text analysis, chatbots, and content generation",
+      "Develop computer vision solutions for image and video processing",
+      "Deploy and monitor ML models in production environments",
+      "Collaborate with product teams to identify AI/ML opportunities",
+      "Stay current with latest research and implement state-of-the-art techniques",
+    ],
+    requirements: [
+      "5+ years of experience in machine learning and data science",
+      "Strong proficiency in Python, TensorFlow, and PyTorch",
+      "Experience with NLP, computer vision, or recommendation systems",
+      "Knowledge of MLOps practices and model deployment pipelines",
+      "Experience with cloud ML services (AWS SageMaker, GCP Vertex AI)",
+      "MS or PhD in Computer Science, AI, or related field preferred",
+    ],
+    tags: ["Python", "TensorFlow", "PyTorch", "NLP"],
+    gradient: "from-green-500 to-accent-500",
+    salary: "$130K - $180K",
+  },
+  {
+    slug: "ui-ux-designer",
+    title: "UI/UX Designer",
+    department: "Design",
+    location: "Remote / Silicon Valley",
+    type: "Full-time",
+    level: "Mid-Senior",
+    description:
+      "Design intuitive user interfaces and experiences for web and mobile applications across diverse industries.",
+    longDescription:
+      "We're looking for a talented UI/UX Designer who can transform complex requirements into beautiful, intuitive interfaces. You'll work on a wide range of projects across healthcare, fintech, e-commerce, and SaaS, creating user-centered designs that drive engagement and business results.",
+    responsibilities: [
+      "Conduct user research, interviews, and usability testing",
+      "Create wireframes, prototypes, and high-fidelity mockups",
+      "Design and maintain design systems and component libraries",
+      "Collaborate with developers to ensure design accuracy in implementation",
+      "Analyze user behavior data to identify UX improvement opportunities",
+      "Present design concepts and rationale to clients and stakeholders",
+    ],
+    requirements: [
+      "4+ years of UI/UX design experience for web and mobile applications",
+      "Expert proficiency in Figma and prototyping tools",
+      "Strong portfolio demonstrating user-centered design process",
+      "Experience with design systems and component-based design",
+      "Understanding of accessibility standards (WCAG) and responsive design",
+      "Excellent visual design skills and attention to detail",
+    ],
+    tags: ["Figma", "Prototyping", "User Research", "Design Systems"],
+    gradient: "from-accent-500 to-blue-500",
+    salary: "$90K - $130K",
+  },
+  {
+    slug: "devops-engineer",
+    title: "DevOps Engineer",
+    department: "Infrastructure",
+    location: "Remote",
+    type: "Full-time",
+    level: "Mid-Senior",
+    description:
+      "Build and maintain CI/CD pipelines, manage cloud infrastructure, and implement DevSecOps best practices.",
+    longDescription:
+      "As a DevOps Engineer, you'll be responsible for building and maintaining the infrastructure that powers our clients' applications. You'll design CI/CD pipelines, manage cloud resources, implement monitoring and alerting, and ensure high availability and security across all deployments.",
+    responsibilities: [
+      "Design and maintain CI/CD pipelines using GitHub Actions, Jenkins, or GitLab CI",
+      "Manage cloud infrastructure on AWS, Azure, or GCP using IaC (Terraform)",
+      "Implement container orchestration with Docker and Kubernetes",
+      "Set up monitoring, logging, and alerting (Prometheus, Grafana, ELK)",
+      "Implement security best practices and DevSecOps processes",
+      "Optimize infrastructure costs and performance",
+    ],
+    requirements: [
+      "4+ years of DevOps/SRE experience",
+      "Strong experience with AWS, Azure, or Google Cloud Platform",
+      "Proficiency with Docker, Kubernetes, and container orchestration",
+      "Experience with Infrastructure as Code (Terraform, Pulumi, or CloudFormation)",
+      "Knowledge of scripting languages (Bash, Python)",
+      "AWS/Azure/GCP certification preferred",
+    ],
+    tags: ["AWS", "Docker", "Kubernetes", "Terraform"],
+    gradient: "from-orange-500 to-red-500",
+    salary: "$110K - $150K",
+  },
+  {
+    slug: "project-manager",
+    title: "Project Manager",
+    department: "Operations",
+    location: "Silicon Valley",
+    type: "Full-time",
+    level: "Senior",
+    description:
+      "Lead agile project delivery, manage client relationships, and ensure on-time, on-budget project completion.",
+    longDescription:
+      "We're looking for an experienced Project Manager to lead the delivery of complex software projects. You'll be the bridge between our engineering teams and clients, ensuring clear communication, on-time delivery, and exceptional client satisfaction. You'll manage multiple concurrent projects using agile methodologies.",
+    responsibilities: [
+      "Lead agile project delivery with bi-weekly sprints and retrospectives",
+      "Manage client relationships, expectations, and communication",
+      "Create and maintain project plans, timelines, and resource allocation",
+      "Identify and mitigate project risks proactively",
+      "Facilitate daily standups, sprint planning, and demo sessions",
+      "Track project budgets and ensure on-budget delivery",
+    ],
+    requirements: [
+      "5+ years of software project management experience",
+      "Strong experience with Agile/Scrum methodologies",
+      "Excellent client communication and stakeholder management skills",
+      "Proficiency with project management tools (Jira, Asana, or Linear)",
+      "PMP or Scrum Master certification preferred",
+      "Technical background with ability to understand software architecture",
+    ],
+    tags: ["Agile", "Scrum", "Jira", "Client Management"],
+    gradient: "from-teal-500 to-primary-500",
+    salary: "$100K - $140K",
+  },
+];
+
 export function getProjectBySlug(slug: string) {
   return projects.find((p) => p.slug === slug);
 }
 
 export function getBlogPostBySlug(slug: string) {
   return blogPosts.find((p) => p.slug === slug);
+}
+
+export function getPositionBySlug(slug: string) {
+  return openPositions.find((p) => p.slug === slug);
 }

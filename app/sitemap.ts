@@ -1,5 +1,5 @@
 import { MetadataRoute } from "next";
-import { projects, blogPosts } from "@/lib/data";
+import { projects, blogPosts, openPositions } from "@/lib/data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://codexasoft.com";
@@ -81,5 +81,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticPages, ...projectPages, ...blogPages];
+  const careerPages: MetadataRoute.Sitemap = openPositions.map((position) => ({
+    url: `${baseUrl}/careers/apply/${position.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }));
+
+  return [...staticPages, ...projectPages, ...blogPages, ...careerPages];
 }

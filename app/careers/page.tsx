@@ -18,6 +18,7 @@ import {
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { openPositions } from "@/lib/data";
 
 const benefits = [
   { icon: Globe, title: "Remote-Friendly", description: "Work from anywhere in the world with flexible hours." },
@@ -26,75 +27,6 @@ const benefits = [
   { icon: Heart, title: "Health Insurance", description: "Comprehensive health, dental, and vision coverage for you and family." },
   { icon: Laptop, title: "Top Equipment", description: "MacBook Pro, 4K monitor, and any tools you need to do your best work." },
   { icon: Coffee, title: "Unlimited PTO", description: "Take the time you need. We trust you to manage your schedule." },
-];
-
-const openPositions = [
-  {
-    title: "Senior React Developer",
-    department: "Engineering",
-    location: "Remote / Silicon Valley",
-    type: "Full-time",
-    level: "Senior",
-    description:
-      "Build high-performance web applications using React, Next.js, and TypeScript for our enterprise clients.",
-    tags: ["React", "Next.js", "TypeScript", "Node.js"],
-    gradient: "from-blue-500 to-primary-500",
-  },
-  {
-    title: "Flutter Mobile Developer",
-    department: "Mobile",
-    location: "Remote / Silicon Valley",
-    type: "Full-time",
-    level: "Mid-Senior",
-    description:
-      "Create beautiful cross-platform mobile applications using Flutter and Dart for iOS and Android.",
-    tags: ["Flutter", "Dart", "Firebase", "REST APIs"],
-    gradient: "from-primary-500 to-teal-500",
-  },
-  {
-    title: "AI/ML Engineer",
-    department: "AI Division",
-    location: "Remote",
-    type: "Full-time",
-    level: "Senior",
-    description:
-      "Design and implement machine learning models, NLP systems, and AI-powered features for client products.",
-    tags: ["Python", "TensorFlow", "PyTorch", "NLP"],
-    gradient: "from-green-500 to-accent-500",
-  },
-  {
-    title: "UI/UX Designer",
-    department: "Design",
-    location: "Remote / Silicon Valley",
-    type: "Full-time",
-    level: "Mid-Senior",
-    description:
-      "Design intuitive user interfaces and experiences for web and mobile applications across diverse industries.",
-    tags: ["Figma", "Prototyping", "User Research", "Design Systems"],
-    gradient: "from-accent-500 to-blue-500",
-  },
-  {
-    title: "DevOps Engineer",
-    department: "Infrastructure",
-    location: "Remote",
-    type: "Full-time",
-    level: "Mid-Senior",
-    description:
-      "Build and maintain CI/CD pipelines, manage cloud infrastructure, and implement DevSecOps best practices.",
-    tags: ["AWS", "Docker", "Kubernetes", "Terraform"],
-    gradient: "from-orange-500 to-red-500",
-  },
-  {
-    title: "Project Manager",
-    department: "Operations",
-    location: "Silicon Valley",
-    type: "Full-time",
-    level: "Senior",
-    description:
-      "Lead agile project delivery, manage client relationships, and ensure on-time, on-budget project completion.",
-    tags: ["Agile", "Scrum", "Jira", "Client Management"],
-    gradient: "from-teal-500 to-primary-500",
-  },
 ];
 
 const containerVariants = {
@@ -307,10 +239,10 @@ export default function CareersPage() {
                   </div>
 
                   <Link
-                    href="/contact"
+                    href={`/careers/apply/${position.slug}`}
                     className="shrink-0 inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-white bg-gradient-to-r from-primary-500 to-teal-500 rounded-full hover:shadow-lg hover:shadow-primary-500/25 transition-all duration-300 hover:scale-105"
                   >
-                    Apply
+                    Apply Now
                     <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
