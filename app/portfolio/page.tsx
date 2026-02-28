@@ -40,7 +40,7 @@ export default function PortfolioPage() {
       <Navbar />
 
       {/* Hero */}
-      <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
+      <section className="relative pt-40 pb-20 md:pt-48 md:pb-28 overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern" />
         <div className="absolute inset-0 bg-gradient-to-b from-dark-900 via-dark-900/50 to-dark-900" />
         <div className="absolute top-1/3 -left-32 w-96 h-96 bg-primary-500/15 rounded-full blur-[128px]" />
@@ -70,7 +70,7 @@ export default function PortfolioPage() {
       </section>
 
       {/* Filter Tabs */}
-      <section className="relative pb-8">
+      <section className="relative pt-10 pb-8">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

@@ -30,9 +30,9 @@ const footerLinks = {
   ],
   support: [
     { name: "Contact Us", href: "/contact" },
-    { name: "FAQ", href: "/contact" },
-    { name: "Privacy Policy", href: "#" },
-    { name: "Terms of Service", href: "#" },
+    { name: "Careers", href: "/careers" },
+    { name: "Privacy Policy", href: "/privacy-policy" },
+    { name: "Terms of Service", href: "/terms-of-service" },
   ],
 };
 

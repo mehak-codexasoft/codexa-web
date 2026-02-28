@@ -19,7 +19,7 @@ export default function BlogPostContent({ post }: { post: BlogPost }) {
       <Navbar />
 
       {/* Hero */}
-      <section className="relative pt-32 pb-16 md:pt-40 md:pb-20 overflow-hidden">
+      <section className="relative pt-40 pb-16 md:pt-48 md:pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern" />
         <div className="absolute inset-0 bg-gradient-to-b from-dark-900 via-dark-900/50 to-dark-900" />
         <div className="absolute top-1/4 -right-32 w-96 h-96 bg-primary-500/15 rounded-full blur-[128px]" />
