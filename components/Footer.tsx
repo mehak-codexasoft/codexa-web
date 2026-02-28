@@ -63,30 +63,30 @@ export default function Footer() {
               />
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed max-w-sm mb-6">
-              Empowering businesses with innovative software solutions. We
-              transform ideas into powerful digital products that drive growth
-              and success.
+              Codexa Soft is a leading IT Services and Consulting company,
+              specializing in custom software development, cloud solutions,
+              cybersecurity, and digital transformation.
             </p>
 
             {/* Contact Info */}
             <div className="space-y-3">
               <a
-                href="mailto:hello@codexasoft.com"
+                href="mailto:admin@codexasoft.com"
                 className="flex items-center gap-3 text-sm text-gray-400 hover:text-primary-400 transition-colors"
               >
                 <Mail className="w-4 h-4" />
-                hello@codexasoft.com
+                admin@codexasoft.com
               </a>
               <a
-                href="tel:+1234567890"
+                href="tel:+923030499888"
                 className="flex items-center gap-3 text-sm text-gray-400 hover:text-primary-400 transition-colors"
               >
                 <Phone className="w-4 h-4" />
-                +1 (234) 567-890
+                +92 303 0499888
               </a>
               <div className="flex items-center gap-3 text-sm text-gray-400">
                 <MapPin className="w-4 h-4 shrink-0" />
-                123 Tech Street, Silicon Valley, CA 94025
+                Islamabad, Pakistan
               </div>
             </div>
           </div>

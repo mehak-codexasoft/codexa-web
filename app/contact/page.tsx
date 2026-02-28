@@ -23,19 +23,19 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email Us",
-    details: ["hello@codexasoft.com", "support@codexasoft.com"],
+    details: ["admin@codexasoft.com"],
     color: "from-primary-500 to-teal-500",
   },
   {
     icon: Phone,
     title: "Call Us",
-    details: ["+1 (234) 567-890", "+92 (321) 456-7890"],
+    details: ["+92 303 0499888"],
     color: "from-teal-400 to-accent-500",
   },
   {
     icon: MapPin,
     title: "Visit Us",
-    details: ["123 Tech Street", "Silicon Valley, CA 94025"],
+    details: ["Islamabad, Pakistan"],
     color: "from-accent-500 to-blue-500",
   },
   {
@@ -342,7 +342,7 @@ export default function ContactPage() {
                 </h3>
                 <div className="space-y-5">
                   <a
-                    href="mailto:hello@codexasoft.com"
+                    href="mailto:admin@codexasoft.com"
                     className="flex items-center gap-4 text-gray-400 hover:text-primary-400 transition-colors group"
                   >
                     <div className="w-10 h-10 rounded-lg bg-primary-500/10 flex items-center justify-center group-hover:bg-primary-500/20 transition-colors">
@@ -352,11 +352,11 @@ export default function ContactPage() {
                       <div className="text-sm font-medium text-gray-300">
                         Email
                       </div>
-                      <div className="text-sm">hello@codexasoft.com</div>
+                      <div className="text-sm">admin@codexasoft.com</div>
                     </div>
                   </a>
                   <a
-                    href="tel:+1234567890"
+                    href="tel:+923030499888"
                     className="flex items-center gap-4 text-gray-400 hover:text-primary-400 transition-colors group"
                   >
                     <div className="w-10 h-10 rounded-lg bg-primary-500/10 flex items-center justify-center group-hover:bg-primary-500/20 transition-colors">
@@ -366,7 +366,7 @@ export default function ContactPage() {
                       <div className="text-sm font-medium text-gray-300">
                         Phone
                       </div>
-                      <div className="text-sm">+1 (234) 567-890</div>
+                      <div className="text-sm">+92 303 0499888</div>
                     </div>
                   </a>
                   <div className="flex items-center gap-4 text-gray-400">
@@ -377,7 +377,7 @@ export default function ContactPage() {
                       <div className="text-sm font-medium text-gray-300">
                         Address
                       </div>
-                      <div className="text-sm">123 Tech Street, Silicon Valley</div>
+                      <div className="text-sm">Islamabad, Pakistan</div>
                     </div>
                   </div>
                 </div>

@@ -61,7 +61,7 @@ export default function ChatWidget() {
               </p>
 
               <a
-                href="https://wa.me/1234567890?text=Hi%20CodexaSoft!%20I%27d%20like%20to%20discuss%20a%20project."
+                href="https://wa.me/923030499888?text=Hi%20CodexaSoft!%20I%27d%20like%20to%20discuss%20a%20project."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 p-3 rounded-xl bg-green-500/10 border border-green-500/20 hover:bg-green-500/20 transition-all group"
@@ -78,7 +78,7 @@ export default function ChatWidget() {
               </a>
 
               <a
-                href="tel:+1234567890"
+                href="tel:+923030499888"
                 className="flex items-center gap-3 p-3 rounded-xl bg-white/[0.03] border border-white/[0.08] hover:bg-white/[0.06] transition-all group"
               >
                 <div className="w-10 h-10 rounded-lg bg-primary-500/20 flex items-center justify-center shrink-0">
@@ -88,12 +88,12 @@ export default function ChatWidget() {
                   <div className="text-sm font-medium text-white group-hover:text-primary-400 transition-colors">
                     Call Us
                   </div>
-                  <div className="text-xs text-gray-500">+1 (234) 567-890</div>
+                  <div className="text-xs text-gray-500">+92 303 0499888</div>
                 </div>
               </a>
 
               <a
-                href="mailto:hello@codexasoft.com"
+                href="mailto:admin@codexasoft.com"
                 className="flex items-center gap-3 p-3 rounded-xl bg-white/[0.03] border border-white/[0.08] hover:bg-white/[0.06] transition-all group"
               >
                 <div className="w-10 h-10 rounded-lg bg-teal-500/20 flex items-center justify-center shrink-0">
@@ -103,7 +103,7 @@ export default function ChatWidget() {
                   <div className="text-sm font-medium text-white group-hover:text-teal-400 transition-colors">
                     Email Us
                   </div>
-                  <div className="text-xs text-gray-500">hello@codexasoft.com</div>
+                  <div className="text-xs text-gray-500">admin@codexasoft.com</div>
                 </div>
               </a>
 
