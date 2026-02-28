@@ -5,21 +5,38 @@ import {
   Globe,
   Smartphone,
   Palette,
-  Cloud,
+  ShoppingBag,
   Brain,
-  Settings,
+  Layout,
+  Code2,
 } from "lucide-react";
 import Link from "next/link";
 import TiltCard from "./TiltCard";
 
 const services = [
   {
-    icon: Globe,
-    title: "Web Development",
+    icon: ShoppingBag,
+    title: "Shopify Store Development",
     description:
-      "Full-stack web applications built with modern frameworks like React, Next.js, and Node.js for blazing-fast performance.",
+      "Custom Shopify stores with stunning themes, seamless checkout, and integrations that drive sales and conversions.",
+    color: "from-green-500 to-teal-500",
+    shadow: "shadow-green-500/20",
+  },
+  {
+    icon: Layout,
+    title: "WordPress Development",
+    description:
+      "Professional WordPress websites with custom themes, plugins, and optimized performance for your business.",
     color: "from-blue-500 to-primary-500",
     shadow: "shadow-blue-500/20",
+  },
+  {
+    icon: Brain,
+    title: "AI App Development",
+    description:
+      "Intelligent AI-powered applications with custom models, chatbots, and automation that transform your business.",
+    color: "from-purple-500 to-accent-500",
+    shadow: "shadow-purple-500/20",
   },
   {
     icon: Smartphone,
@@ -30,36 +47,28 @@ const services = [
     shadow: "shadow-primary-500/20",
   },
   {
+    icon: Globe,
+    title: "Website Development",
+    description:
+      "Full-stack web applications built with modern frameworks like React, Next.js, and Node.js for blazing-fast performance.",
+    color: "from-teal-400 to-blue-500",
+    shadow: "shadow-teal-500/20",
+  },
+  {
+    icon: Code2,
+    title: "Software Development",
+    description:
+      "Custom software solutions tailored to your business — from enterprise platforms to desktop applications and APIs.",
+    color: "from-orange-500 to-red-500",
+    shadow: "shadow-orange-500/20",
+  },
+  {
     icon: Palette,
     title: "UI/UX Design",
     description:
       "Intuitive and stunning interfaces designed to captivate your users and boost engagement with pixel-perfect precision.",
-    color: "from-teal-400 to-accent-500",
-    shadow: "shadow-teal-500/20",
-  },
-  {
-    icon: Cloud,
-    title: "Cloud Solutions",
-    description:
-      "Scalable cloud architecture on AWS, Azure, and GCP to ensure your infrastructure grows with your business.",
-    color: "from-accent-500 to-blue-500",
+    color: "from-accent-500 to-primary-500",
     shadow: "shadow-accent-500/20",
-  },
-  {
-    icon: Brain,
-    title: "AI & Machine Learning",
-    description:
-      "Intelligent automation and data-driven insights powered by custom AI/ML models tailored to your needs.",
-    color: "from-green-500 to-accent-500",
-    shadow: "shadow-green-500/20",
-  },
-  {
-    icon: Settings,
-    title: "DevOps & Automation",
-    description:
-      "Streamlined CI/CD pipelines, containerization, and infrastructure-as-code for faster, reliable deployments.",
-    color: "from-orange-500 to-red-500",
-    shadow: "shadow-orange-500/20",
   },
 ];
 

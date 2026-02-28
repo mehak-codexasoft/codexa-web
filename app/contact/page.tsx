@@ -23,19 +23,19 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email Us",
-    details: ["hello@codexasoft.com", "support@codexasoft.com"],
+    details: ["admin@codexasoft.com"],
     color: "from-primary-500 to-teal-500",
   },
   {
     icon: Phone,
     title: "Call Us",
-    details: ["+1 (234) 567-890", "+92 (321) 456-7890"],
+    details: ["+92 303 0499888"],
     color: "from-teal-400 to-accent-500",
   },
   {
     icon: MapPin,
     title: "Visit Us",
-    details: ["123 Tech Street", "Silicon Valley, CA 94025"],
+    details: ["Islamabad, Pakistan"],
     color: "from-accent-500 to-blue-500",
   },
   {
@@ -47,13 +47,13 @@ const contactInfo = [
 ];
 
 const services = [
-  "Web Development",
+  "Shopify Store Development",
+  "WordPress Development",
+  "AI App Development",
   "Mobile App Development",
+  "Website Development",
+  "Software Development",
   "UI/UX Design",
-  "Cloud Solutions",
-  "AI & Machine Learning",
-  "DevOps & Automation",
-  "Custom Software",
   "Consultation",
 ];
 
@@ -114,7 +114,7 @@ export default function ContactPage() {
       <Navbar />
 
       {/* Hero */}
-      <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
+      <section className="relative pt-40 pb-20 md:pt-48 md:pb-28 overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern" />
         <div className="absolute inset-0 bg-gradient-to-b from-dark-900 via-dark-900/50 to-dark-900" />
         <div className="absolute top-1/4 -left-32 w-96 h-96 bg-primary-500/15 rounded-full blur-[128px]" />
@@ -342,7 +342,7 @@ export default function ContactPage() {
                 </h3>
                 <div className="space-y-5">
                   <a
-                    href="mailto:hello@codexasoft.com"
+                    href="mailto:admin@codexasoft.com"
                     className="flex items-center gap-4 text-gray-400 hover:text-primary-400 transition-colors group"
                   >
                     <div className="w-10 h-10 rounded-lg bg-primary-500/10 flex items-center justify-center group-hover:bg-primary-500/20 transition-colors">
@@ -352,11 +352,11 @@ export default function ContactPage() {
                       <div className="text-sm font-medium text-gray-300">
                         Email
                       </div>
-                      <div className="text-sm">hello@codexasoft.com</div>
+                      <div className="text-sm">admin@codexasoft.com</div>
                     </div>
                   </a>
                   <a
-                    href="tel:+1234567890"
+                    href="tel:+923030499888"
                     className="flex items-center gap-4 text-gray-400 hover:text-primary-400 transition-colors group"
                   >
                     <div className="w-10 h-10 rounded-lg bg-primary-500/10 flex items-center justify-center group-hover:bg-primary-500/20 transition-colors">
@@ -366,7 +366,7 @@ export default function ContactPage() {
                       <div className="text-sm font-medium text-gray-300">
                         Phone
                       </div>
-                      <div className="text-sm">+1 (234) 567-890</div>
+                      <div className="text-sm">+92 303 0499888</div>
                     </div>
                   </a>
                   <div className="flex items-center gap-4 text-gray-400">
@@ -377,7 +377,7 @@ export default function ContactPage() {
                       <div className="text-sm font-medium text-gray-300">
                         Address
                       </div>
-                      <div className="text-sm">123 Tech Street, Silicon Valley</div>
+                      <div className="text-sm">Islamabad, Pakistan</div>
                     </div>
                   </div>
                 </div>
