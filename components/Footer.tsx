@@ -15,11 +15,13 @@ import {
 
 const footerLinks = {
   services: [
-    { name: "Web Development", href: "/services" },
-    { name: "Mobile Apps", href: "/services" },
+    { name: "Shopify Store Development", href: "/services" },
+    { name: "WordPress Development", href: "/services" },
+    { name: "AI App Development", href: "/services" },
+    { name: "Mobile App Development", href: "/services" },
+    { name: "Website Development", href: "/services" },
+    { name: "Software Development", href: "/services" },
     { name: "UI/UX Design", href: "/services" },
-    { name: "Cloud Solutions", href: "/services" },
-    { name: "AI & ML", href: "/services" },
   ],
   company: [
     { name: "About Us", href: "/about" },

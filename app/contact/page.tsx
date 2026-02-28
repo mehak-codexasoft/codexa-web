@@ -47,13 +47,13 @@ const contactInfo = [
 ];
 
 const services = [
-  "Web Development",
+  "Shopify Store Development",
+  "WordPress Development",
+  "AI App Development",
   "Mobile App Development",
+  "Website Development",
+  "Software Development",
   "UI/UX Design",
-  "Cloud Solutions",
-  "AI & Machine Learning",
-  "DevOps & Automation",
-  "Custom Software",
   "Consultation",
 ];
 
